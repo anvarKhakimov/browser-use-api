@@ -26,8 +26,8 @@ class SearchRequest(BaseModel):
     timeout: Optional[int] = Field(
         300,
         ge=30,
-        le=600,
-        description="Timeout in seconds for the entire task execution",
+        le=1200,
+        description="Timeout in seconds for the entire task execution (max 20 minutes)",
     )
 
     use_vision: bool = Field(
@@ -53,7 +53,7 @@ class SearchRequest(BaseModel):
                 {
                     "task": "What's the current weather in Tokyo?",
                     "max_steps": 20,
-                    "timeout": 120,
+                    "timeout": 300,
                     "use_vision": False,
                     "flash_mode": True
                 }

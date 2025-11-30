@@ -33,7 +33,7 @@ class Settings(BaseSettings):
 
     # Browser Configuration
     max_concurrent_browsers: int = Field(2, ge=1, le=5, description="Maximum concurrent browser instances")
-    browser_timeout: int = Field(300, ge=30, le=600, description="Browser operation timeout in seconds")
+    browser_timeout: int = Field(300, ge=30, le=1200, description="Browser operation timeout in seconds (max 20 minutes)")
     max_steps: int = Field(40, ge=1, le=200, description="Maximum agent steps per task")
     headless_browser: bool = Field(True, description="Run browser in headless mode (no GUI)")
 

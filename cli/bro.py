@@ -23,7 +23,7 @@ console = Console()
 CONFIG_FILE = Path.home() / ".broconfig"
 DEFAULT_API_URL = "http://localhost:8765"
 DEFAULT_MAX_STEPS = 10
-DEFAULT_TIMEOUT = 120
+DEFAULT_TIMEOUT = 1200  # 20 minutes
 
 
 def load_config() -> Dict[str, Any]:
