@@ -42,10 +42,10 @@ class AgentService:
         # Priority 1: Google Gemini (User's preference)
         if self.settings.google_api_key:
             try:
-                logger.info("Using Google Gemini LLM (gemini-2.5-flash-preview-09-2025)")
+                logger.info("Using Google Gemini LLM (gemini-2.5-flash)")
                 # Use browser-use's ChatGoogle which properly implements the provider property
                 return ChatGoogle(
-                    model="gemini-2.5-flash-preview-09-2025",
+                    model="gemini-2.5-flash",
                     api_key=self.settings.google_api_key,
                     temperature=0.5,
                     max_output_tokens=8096,
